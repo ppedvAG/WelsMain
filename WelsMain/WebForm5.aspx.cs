@@ -25,6 +25,11 @@ namespace WelsMain
                 RadioButtonList1.Items.Add(day);
             }
         }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Write(((RadioButtonList)sender).SelectedValue);
+        }
         // Enum.Parse(typeof(DayOfWeek),)
 
     }
