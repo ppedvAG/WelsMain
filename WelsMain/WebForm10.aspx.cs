@@ -19,10 +19,11 @@ namespace WelsMain
             if (Request.GetFriendlyUrlSegments().Count>1)
             {
                 Label1.Text= Request.GetFriendlyUrlSegments()[1];
+                
             }
-            
+            var x = FriendlyUrl.Segments;
 
-           
+           Label1.Text= Request.LogonUserIdentity.Name;
 
 
         }

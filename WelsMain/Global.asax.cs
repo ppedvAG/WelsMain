@@ -16,6 +16,18 @@ namespace WelsMain
             // Code, der beim Anwendungsstart ausgeführt wird
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Application.Add("anzahluser", 0);
+        }
+        void Session_Start(object sender,EventArgs e)
+        {
+            Application["anzahluser"] =
+                (int) Application["anzahluser"] + 1;
+
+        }
+        void Session_End(object sender, EventArgs e)
+        {
+            Application["anzahluser"] =
+              (int)Application["anzahluser"] - 1;
         }
     }
 }
