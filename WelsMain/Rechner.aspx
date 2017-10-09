@@ -17,24 +17,24 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
-                        <label for="email">Wert1</label>
-                        <asp:TextBox ID="txtEins" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="txtEins">Wert1</label>
+                        <asp:TextBox ID="txtEins" CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="email">Wert1</label>
-                        <asp:TextBox ID="txtZwei" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label for="txtZwei">Wert1</label>
+                        <asp:TextBox ID="txtZwei"  CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
                     </div>
                     <h1>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
                 </div>
                 <div class="col-md-3">
                     <div class="btn-group btn-group-lg" role="group">
                         <asp:Button ID="plus" runat="server"
                             OnClick="plus_Click"
-                            Text="+" CssClass="btn btn-primary" />
+                            Text="+" CssClass="btn btn-warning" />
                         <asp:Button ID="Minus" runat="server"
                             OnClick="Minus_Click"
-                            Text="-" CssClass="btn btn-primary" />
+                            Text="-" CssClass="btn btn-danger" />
 
 
                     </div>

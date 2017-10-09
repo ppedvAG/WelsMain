@@ -22,7 +22,8 @@ namespace WelsMain
 
         protected void Minus_Click(object sender, EventArgs e)
         {
-            Label1.Text =(Convert.ToDouble(txtEins.Text) - Convert.ToDouble(txtZwei.Text)).ToString();
+            Label1.Text =(Convert.ToDouble(txtEins.Text) -
+                Convert.ToDouble(txtZwei.Text)).ToString();
         }
     }
 }
