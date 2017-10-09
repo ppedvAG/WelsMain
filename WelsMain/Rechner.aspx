@@ -1,0 +1,43 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rechner.aspx.cs" Inherits="WelsMain.Rechner" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form1" runat="server">
+        <div class="row">
+            <div class="form-group">
+                <label for="email">Wert1</label>
+                <asp:TextBox ID="txtEins" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label for="email">Wert1</label>
+                <asp:TextBox ID="txtZwei" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+            </div>
+            <h1>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
+            <div class="btn-group-lg" role="group" >
+                <asp:Button ID="plus" runat="server" 
+                    OnClick="plus_Click"
+                    Text="+" cssclass="btn btn-default"/>
+                <asp:Button ID="Minus" runat="server" 
+                    OnClick="Minus_Click"
+                    Text="-"  cssclass="btn btn-default"/>
+ 
+ 
+</div>
+         
+        </div>
+
+    </form>
+        </div>
+</body>
+</html>
