@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -18,11 +19,15 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label for="txtEins">Wert1</label>
-                        <asp:TextBox ID="txtEins" CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
+                        <asp:TextBox ID="txtEins"
+                            PlaceHolder="Zahl"
+                            CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="txtZwei">Wert1</label>
-                        <asp:TextBox ID="txtZwei"  CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
+                        <asp:TextBox ID="txtZwei" 
+                            PlaceHolder="Zahl"
+                            CssClass="form-control" runat="server" ClientIDMode="Static"></asp:TextBox>
                     </div>
                     <h1>
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></h1>
