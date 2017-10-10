@@ -13,24 +13,50 @@
 <body>
     <h1>Essen Manager V1.0</h1>
     <div class="container">
-        <form id="form1" runat="server">
+        <form id="form1" runat="server" class="form-horizontal">
             <div class="row">
                 <div class="col-md-6">
                     <ul class="list-group">
                         <asp:Repeater ID="rptEssen" runat="server">
                             <ItemTemplate>
                                 <li class="list-group-item"><%#Eval("Essen") %>
-                                     <span class="badge"><%#Eval("Preis") %> €</span>
-
-
+                                    <span class="badge"><%#Eval("Preis") %> €</span>
                                 </li>
                             </ItemTemplate>
-
                         </asp:Repeater>
                     </ul>
+                </div>
+                <div class="col-md-6">
+
+                    <fieldset>
+
+                        <legend>Neues Essen</legend>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtessen">Essen</label>
+                            <div class="col-md-4">
+                                <asp:TextBox ID="txtessen" ccsclass="form-control input-md" placeholder="essentext" runat="server"></asp:TextBox>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="txtpreis">Preis €</label>
+                            <div class="col-md-4">
+                                <asp:TextBox ID="txtpreis" ccsclass="form-control input-md" placeholder="Preis €" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Button" />
+                            </div>
+                        </div>
+
+                    </fieldset>
+
 
                 </div>
-                <div class="col-md-6"></div>
             </div>
         </form>
 
