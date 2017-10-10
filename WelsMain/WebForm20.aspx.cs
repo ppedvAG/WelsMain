@@ -31,8 +31,8 @@ namespace WelsMain
             while (reader.Read())
             {
                 var e = new Essen();
-                e.Id = (int) reader["EssenId"];
-                e.EssenText = reader["Essen"].ToString();
+                e.EssenId = (int) reader["EssenId"];
+                e.Essen1 = reader["Essen"].ToString();
                 e.Preis =(int) reader["Preis"];
                 liste.Add(e);
 
@@ -40,7 +40,7 @@ namespace WelsMain
             reader.Close();
             con.Close();
             var q = from es in liste
-                    where es.EssenText.Contains(txtSuche.Text)
+                    where es.Essen1.Contains(txtSuche.Text)
                     select es;
             return q;
         }

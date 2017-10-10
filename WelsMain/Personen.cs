@@ -6,22 +6,20 @@ namespace WelsMain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Essen")]
-    public partial class Essen
+    [Table("Personen")]
+    public partial class Personen
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Essen()
+        public Personen()
         {
             Verzehr = new HashSet<Verzehr>();
         }
 
-        public int EssenId { get; set; }
+        [Key]
+        public int PersonID { get; set; }
 
-        [Column("Essen")]
         [StringLength(50)]
-        public string Essen1 { get; set; }
-
-        public int Preis { get; set; }
+        public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Verzehr> Verzehr { get; set; }

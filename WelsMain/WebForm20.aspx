@@ -32,7 +32,7 @@
                         <asp:Repeater ID="rptEssen" runat="server"
                             ItemType="WelsMain.Essen" SelectMethod="rptEssen_GetData">
                             <ItemTemplate>
-                                <li class="list-group-item"><%#Item.EssenText%>
+                                <li class="list-group-item"><%#Item.Essen1%>
                                     <span class="badge"><%#Item.Preis%> €</span>
                                 </li>
                             </ItemTemplate>
