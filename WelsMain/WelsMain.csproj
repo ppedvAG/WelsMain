@@ -131,6 +131,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\hannes.txt" />
     <Content Include="App_Data\TextFile1.txt" />
     <Content Include="Contact.aspx" />
@@ -200,6 +204,7 @@
     <Content Include="WebForm14.aspx" />
     <Content Include="WebForm15.aspx" />
     <Content Include="WebForm16.aspx" />
+    <Content Include="WebForm17.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
@@ -373,6 +378,13 @@
     </Compile>
     <Compile Include="WebForm16.aspx.designer.cs">
       <DependentUpon>WebForm16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm17.aspx.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm17.aspx.designer.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
