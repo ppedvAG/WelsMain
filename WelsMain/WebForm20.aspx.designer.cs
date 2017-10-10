@@ -37,7 +37,7 @@ namespace WelsMain {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.LinkButton Button1;
         
         /// <summary>
         /// rptEssen-Steuerelement

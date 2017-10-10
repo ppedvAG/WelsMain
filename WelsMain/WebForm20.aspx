@@ -21,7 +21,9 @@
                             <div class="input-group">
                                 <asp:TextBox ID="txtSuche" CssClass="form-control input-md" Text="e" runat="server"></asp:TextBox>
                                 <span class="input-group-btn">
-                                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-danger" Text="S" />
+                                    <asp:LinkButton ID="Button1" runat="server" CssClass="btn btn-danger" Text="S" >
+                                       <span class="glyphicon glyphicon-search"></span>
+                                        </asp:LinkButton>
                                 </span>
                             </div>
                         </li>
@@ -36,6 +38,9 @@
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
+                    <script>
+                        $("li").filter(":even").css("background-color", "lightblue");
+                    </script>
                 </div>
                 <div class="col-md-6">
                     <fieldset>

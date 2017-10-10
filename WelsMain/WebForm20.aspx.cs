@@ -40,7 +40,7 @@ namespace WelsMain
             reader.Close();
             con.Close();
             var q = from es in liste
-                    where es.EssenText.Contains(suche)
+                    where es.EssenText.Contains(txtSuche.Text)
                     select es;
             return q;
         }
