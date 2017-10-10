@@ -19,7 +19,7 @@
                     <ul class="list-group">
                         <li class="list-group-item  active">
                             <div class="input-group">
-                                <asp:TextBox ID="txtSuche" CssClass="form-control input-md" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSuche" CssClass="form-control input-md" Text="e" runat="server"></asp:TextBox>
                                 <span class="input-group-btn">
                                     <asp:Button ID="Button1" runat="server" CssClass="btn btn-danger" Text="S" />
                                 </span>

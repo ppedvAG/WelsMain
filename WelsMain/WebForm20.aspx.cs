@@ -39,13 +39,9 @@ namespace WelsMain
             }
             reader.Close();
             con.Close();
-
             var q = from es in liste
                     where es.EssenText.Contains(suche)
                     select es;
-
-                
-
             return q;
         }
     }
