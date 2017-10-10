@@ -18,11 +18,11 @@ namespace WelsMain
         {
             if (WebUserControl11.Text.Length>5)
             {
-                WebUserControl11.IsValid = false;
+                WebUserControl11.IsValid1 = false;
 
             }
             else
-            { WebUserControl11.IsValid = true; }
+            { WebUserControl11.IsValid1 = true; }
         }
     }
 }

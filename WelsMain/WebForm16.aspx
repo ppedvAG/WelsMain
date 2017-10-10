@@ -8,6 +8,9 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script bootstrap.js="" scripts="" src="12345zzzuzz"></script>
 </head>
 <body>
     <form id="form1" runat="server">
