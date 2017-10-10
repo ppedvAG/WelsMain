@@ -189,6 +189,7 @@
     <Content Include="image\IMG_4908.JPG" />
     <Content Include="image\IMG_4909.JPG" />
     <Content Include="image\IMG_4910.JPG" />
+    <Content Include="image\ppedvlogo.gif" />
     <Content Include="image\Save-icon.png" />
     <Content Include="Rechner.aspx" />
     <Content Include="WebForm1.aspx" />
