@@ -49,12 +49,12 @@ namespace WelsMain {
         protected global::System.Web.UI.WebControls.TextBox txtpreis;
         
         /// <summary>
-        /// Button1-Steuerelement
+        /// btnNeu-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnNeu;
     }
 }

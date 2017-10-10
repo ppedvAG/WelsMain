@@ -24,5 +24,17 @@ namespace WelsMain
             rptEssen.DataBind();
 
         }
+
+        protected void btnNeu_Click(object sender, EventArgs e)
+        {
+            var con = new SqlConnection(
+              ConfigurationManager.ConnectionStrings["Database1ConnectionString1"].ConnectionString);
+            var cmd = new SqlCommand("Insert into Essen essen,preis values(@par1,@par2)", con);
+            cmd.Parameters.AddWithValue("@par1", txtessen.Text);
+            cmd.Parameters.AddWithValue("@par2", txtpreis.Text);
+            cmd.ExecuteNonQuery();
+            txtessen.Text = txtpreis.Text = "";
+
+        }
     }
 }
