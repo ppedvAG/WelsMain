@@ -78,10 +78,11 @@ Die Fangmengen für den westlichen Dorsch bleiben den Verhandlungen zufolge im V
             </p>
         </div>
         <div class="col-md-4">
-            <p>
+            <div class="panel panel-primary">
+            <p >
                 Nach rund 20-stündigen Verhandlungen haben sich die EU-Minister heute nach Angaben aus EU-Diplomatenkreisen auf einen Kompromiss für die Fischfangquoten in der Ostsee im kommenden Jahr verständigt. Die für Deutschland wichtigen Heringsbestände in der westlichen Ostsee dürften um 39 Prozent weniger befischt werden.
 Die Fangmengen für den westlichen Dorsch bleiben den Verhandlungen zufolge im Vergleich zum Vorjahr unverändert. Die EU-Kommission hatte zudem ein Aalfangverbot in der Ostsee vorgeschlagen. Das nahmen die Minister allerdings nicht an. Stattdessen soll eine gesamteuropäische Lösung ausgearbeitet werden.
-            </p>
+            </p></div>
         </div>
         <div class="col-md-4">
             <div class="row">
