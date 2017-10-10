@@ -15,9 +15,7 @@ namespace WelsMain
         protected void Page_Load(object sender, EventArgs e)
         {
             loadData();
-
         }
-
         private void loadData()
         {
             var con = new SqlConnection(
