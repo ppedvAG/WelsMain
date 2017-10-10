@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -19,7 +20,7 @@ namespace WelsMain
 
         }
 
-        public IEnumerable<Essen> rptEssen_GetData()
+        public IEnumerable<Essen> rptEssen_GetData([Control("txtSuche")]string suche="")
         {
             var liste = new List<Essen>();
             var con = new SqlConnection(
@@ -39,9 +40,13 @@ namespace WelsMain
             reader.Close();
             con.Close();
 
+            var q = from es in liste
+                    where es.EssenText.Contains(suche)
+                    select es;
 
+                
 
-            return liste;
+            return q;
         }
     }
 }
