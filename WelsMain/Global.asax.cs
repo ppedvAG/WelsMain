@@ -22,6 +22,7 @@ namespace WelsMain
         {
             Application["anzahluser"] =
                 (int) Application["anzahluser"] + 1;
+            Session.Add("Warenkorb", 0);
 
         }
         void Session_End(object sender, EventArgs e)
