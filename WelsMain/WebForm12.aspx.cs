@@ -17,7 +17,7 @@ namespace WelsMain
                 if (Request.QueryString.HasKeys())
                 {
                     var qs = Request.QueryString["datei"];
-                    var vollHoller = Server.MapPath("~\app_data") + qs + ".txt";
+                    var vollHoller = Server.MapPath("~/app_data/") + qs + ".txt";
                     
                     Literal1.Text=File.ReadAllText(vollHoller);
 
