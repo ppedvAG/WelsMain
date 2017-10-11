@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm23.aspx.cs" Inherits="WelsMain.WebForm23" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+   
+    CodeBehind="WebForm23.aspx.cs" Inherits="WelsMain.WebForm23" %>
 
 <!DOCTYPE html>
 
@@ -14,6 +16,10 @@
         <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand">
             <ItemTemplate>
                 <%#Eval("PersonID") %>
+                <asp:LinkButton runat="server" 
+                      CommandArgument='<%#Eval("PersonID") %>' 
+                    CommandName="btnedit"
+                    ><%#Eval("Name") %> </asp:LinkButton>
                 <asp:Button ID="Button1" runat="server" Text="Button"
                     CommandArgument='<%#Eval("PersonID") %>' 
                     CommandName="btn"/>
