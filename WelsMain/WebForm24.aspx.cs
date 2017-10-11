@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.FriendlyUrls.ModelBinding;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,6 +26,50 @@ namespace WelsMain
             }
             var ef = new Kantine();
             return ef.Personen.Find(PersonId);
+        }
+
+        // Der Name des ID-Parameters sollte dem für das Steuerelement festgelegten DataKeyNames-Wert entsprechen.
+        public void FormView1_UpdateItem(int PersonId)
+        {
+            var ef = new Kantine();
+            WelsMain.Personen item = null;
+            // Element hier laden, z. B. item = MyDataLayer.Find(id);
+            if (item == null)
+            {
+                // Das Element wurde nicht gefunden.
+                ModelState.AddModelError("", String.Format("Das Element mit der ID {0} wurde nicht gefunden.", PersonId));
+                return;
+            }
+            TryUpdateModel(item);
+            if (ModelState.IsValid)
+            {
+                // Änderungen hier speichern, z. B. MyDataLayer.SaveChanges();
+                ef.SaveChanges();
+            }
+        }
+
+        // Der Name des ID-Parameters sollte dem für das Steuerelement festgelegten DataKeyNames-Wert entsprechen.
+        public void FormView1_DeleteItem(int PersonId)
+        {
+            var ef = new Kantine();
+            ef.Entry(new Personen { PersonID = PersonId }).State = EntityState.Deleted;
+            ef.SaveChanges();
+
+
+        }
+
+        public void FormView1_InsertItem()
+        {
+            var ef = new Kantine();
+            var item = new WelsMain.Personen();
+            TryUpdateModel(item);
+            if (ModelState.IsValid)
+            {
+                ef.Personen.Add(item);
+                ef.SaveChanges();
+                // Save changes here
+
+            }
         }
     }
 }

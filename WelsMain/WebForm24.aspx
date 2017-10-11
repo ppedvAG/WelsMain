@@ -13,6 +13,9 @@
         <asp:FormView ID="FormView1"
             Itemtype="WelsMain.Personen"
             SelectMethod="FormView1_GetItem"
+            UpdateMethod="FormView1_UpdateItem"
+            DeleteMethod="FormView1_DeleteItem"
+            InsertMethod="FormView1_InsertItem"
             runat="server" AllowPaging="false" DataKeyNames="PersonID"
             >
             <EditItemTemplate>
