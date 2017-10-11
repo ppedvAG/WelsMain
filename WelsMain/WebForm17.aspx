@@ -13,7 +13,9 @@
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="suche" />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="EssenId" DataSourceID="SqlDataSource1" EmptyDataText="Es sind keine Datensätze zum Anzeigen vorhanden." ForeColor="Black" GridLines="Horizontal">
+            <asp:GridView ID="GridView1" runat="server"
+                EnableSortingAndPagingCallbacks="false"
+                AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="EssenId" DataSourceID="SqlDataSource1" EmptyDataText="Es sind keine Datensätze zum Anzeigen vorhanden." ForeColor="Black" GridLines="Horizontal">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                     <asp:BoundField DataField="EssenId" HeaderText="EssenId" ReadOnly="True" SortExpression="EssenId" />

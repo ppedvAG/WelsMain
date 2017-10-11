@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -22,10 +24,14 @@ namespace WelsMain
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IQueryable<WelsMain.Personen> GridView1_GetData()
+        public IQueryable<WelsMain.Personen> GridView1_GetData([Control("DropDownList1")] string esser )
         {
             var ef = new Kantine();
-            return ef.Personen.AsQueryable();
+            Action<string> logger = (m) => Debug.WriteLine(m);
+            ef.Database.Log=logger;
+            var myesser= Convert.ToInt16(DropDownList1.SelectedValue);
+            return ef.Personen.Where((x)=>x.Verzehr.Count>=myesser).AsQueryable();
+           
         }
 
         // Der Name des ID-Parameters sollte dem für das Steuerelement festgelegten DataKeyNames-Wert entsprechen.
