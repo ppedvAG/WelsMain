@@ -203,6 +203,7 @@
     <Content Include="image\ppedvlogo.gif" />
     <Content Include="image\Save-icon.png" />
     <Content Include="Rechner.aspx" />
+    <Content Include="sqlscripte\createdata.txt" />
     <Content Include="sqlscripte\createtables.txt" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm10.aspx" />
