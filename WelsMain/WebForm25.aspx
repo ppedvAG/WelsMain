@@ -39,7 +39,7 @@
                                                 DataSource="<%#Item.Verzehr %>"
                                                 >
                                                 <ItemTemplate>
-                                                    <li><%#Item.EssenId %></li>
+                                                    <li><%#Item.Essen.Essen1 %></li>
                                                 </ItemTemplate>
                                             </asp:Repeater>
                                             </ul>
