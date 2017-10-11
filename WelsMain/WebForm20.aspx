@@ -29,10 +29,16 @@
                         </li>
 
 
-                        <asp:Repeater ID="rptEssen" runat="server"
+                        <asp:Repeater ID="rptEssen" runat="server" OnItemCommand="rptEssen_ItemCommand"
                             ItemType="WelsMain.Essen" SelectMethod="rptEssen_GetData">
                             <ItemTemplate>
-                                <li class="list-group-item"><%#Item.Essen1%>
+                                <li class="list-group-item">
+                                    <asp:LinkButton ID="Button2" runat="server" Text="Button"
+                                        CommandName="hannes" CommandArgument="<%#Item.EssenId %>">
+                                          <span class="glyphicon glyphicon-edit"></span>
+                                        </asp:LinkButton>
+                                    <%#Item.Essen1%>
+                                    
                                     <span class="badge"><%#Item.Preis%> €</span>
                                 </li>
                             </ItemTemplate>
