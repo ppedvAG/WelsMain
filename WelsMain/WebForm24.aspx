@@ -11,8 +11,10 @@
     <form id="form1" runat="server">
    
         <asp:FormView ID="FormView1"
-          
-            runat="server" AllowPaging="True" DataKeyNames="PersonID" DataSourceID="SqlDataSource1">
+            Itemtype="WelsMain.Personen"
+            SelectMethod="FormView1_GetItem"
+            runat="server" AllowPaging="false" DataKeyNames="PersonID"
+            >
             <EditItemTemplate>
                 PersonID:
                 <asp:Label ID="PersonIDLabel1" runat="server" Text='<%# Eval("PersonID") %>' />
@@ -42,19 +44,6 @@
                 &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Neu" />
             </ItemTemplate>
         </asp:FormView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:Database1ConnectionString1 %>" DeleteCommand="DELETE FROM [Personen] WHERE [PersonID] = @PersonID" InsertCommand="INSERT INTO [Personen] ([Name]) VALUES (@Name)" SelectCommand="SELECT * FROM [Personen]" UpdateCommand="UPDATE [Personen] SET [Name] = @Name WHERE [PersonID] = @PersonID">
-            <DeleteParameters>
-                <asp:Parameter Name="PersonID" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="Name" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Name" Type="String" />
-                <asp:Parameter Name="PersonID" Type="Int32" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
    
     </form>
 </body>
