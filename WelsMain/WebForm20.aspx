@@ -21,9 +21,9 @@
                             <div class="input-group">
                                 <asp:TextBox ID="txtSuche" CssClass="form-control input-md" Text="e" runat="server"></asp:TextBox>
                                 <span class="input-group-btn">
-                                    <asp:LinkButton ID="Button1" runat="server" CssClass="btn btn-danger" Text="S" >
+                                    <asp:LinkButton ID="Button1" runat="server" CssClass="btn btn-danger" Text="S">
                                        <span class="glyphicon glyphicon-search"></span>
-                                        </asp:LinkButton>
+                                    </asp:LinkButton>
                                 </span>
                             </div>
                         </li>
@@ -36,9 +36,9 @@
                                     <asp:LinkButton ID="Button2" runat="server" Text="Button"
                                         CommandName="hannes" CommandArgument="<%#Item.EssenId %>">
                                           <span class="glyphicon glyphicon-edit"></span>
-                                        </asp:LinkButton>
+                                    </asp:LinkButton>
                                     <%#Item.Essen1%>
-                                    
+
                                     <span class="badge"><%#Item.Preis%> €</span>
                                 </li>
                             </ItemTemplate>

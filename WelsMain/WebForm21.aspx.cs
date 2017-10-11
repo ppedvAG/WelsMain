@@ -21,7 +21,6 @@ namespace WelsMain
         {
 
             int id = Convert.ToInt16(DropDownList1.SelectedValue);
-            // Label1.Text = ef.Personen.Where(p => p.PersonID == id).FirstOrDefault().Verzehr.Aggregate((v, v1) => v + (v1.Essen.Preis * v1.Anzahl));
             Label1.Text = ef.Personen.Where(p => p.PersonID == id).FirstOrDefault().Verzehr.Sum((v) => (v.Essen.Preis * v.Anzahl)).ToString();
             
         }
