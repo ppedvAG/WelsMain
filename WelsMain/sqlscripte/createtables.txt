@@ -9,3 +9,13 @@ CREATE TABLE [dbo].[Personen] (
     [Name]     VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([PersonID] ASC)
 );
+CREATE TABLE [dbo].[Verzehr] (
+    [VerzehrId] INT IDENTITY (1, 1) NOT NULL,
+    [PersonId]  INT NOT NULL,
+    [EssenId]   INT NOT NULL,
+    [Anzahl]    INT NULL,
+    PRIMARY KEY CLUSTERED ([VerzehrId] ASC),
+    FOREIGN KEY ([PersonId]) REFERENCES [dbo].[Personen] ([PersonID]),
+    FOREIGN KEY ([EssenId]) REFERENCES [dbo].[Essen] ([EssenId])
+);
+
