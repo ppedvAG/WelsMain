@@ -33,6 +33,8 @@
                                     </div>
                                     <div id="collapse<%#Item.PersonID %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                         <div class="panel-body">
+                                            <div class="row">
+                                            <div class="col-md-8">
                                             <ul>
                                             <asp:Repeater ID="Repeater3" runat="server"
                                                 ItemType="WelsMain.Verzehr"
@@ -43,6 +45,12 @@
                                                 </ItemTemplate>
                                             </asp:Repeater>
                                             </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <h1><%# Item.Verzehr.Sum((c)=>c.Anzahl*c.Essen.Preis) %> €</h1>
+                                               
+                                                </div>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
