@@ -18,39 +18,38 @@
                     <div class="panel-group" id="accordion" role="tablist"
                         aria-multiselectable="true">
 
-                        <asp:Repeater ID="Repeater1" runat="server" 
+                        <asp:Repeater ID="Repeater1" runat="server"
                             ItemType="WelsMain.Personen" SelectMethod="Repeater1_GetData">
                             <ItemTemplate>
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingTwo">
                                         <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
                                                 href="#collapse<%#Item.PersonID %>" aria-expanded="false" aria-controls="collapseTwo">
-                                               <%#Item.Name %>
+                                                <%#Item.Name %>
                                             </a>
-                                            <asp:Repeater ID="Repeater2" runat="server"></asp:Repeater>            <span class="badge pull-right"><%#Item.Verzehr.Count() %></span>
+                                            <asp:Repeater ID="Repeater2" runat="server"></asp:Repeater>
+                                            <span class="badge pull-right"><%#Item.Verzehr.Count() %></span>
                                         </h4>
                                     </div>
                                     <div id="collapse<%#Item.PersonID %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                         <div class="panel-body">
                                             <div class="row">
-                                            <div class="col-md-8">
-                                            <ul>
-                                            <asp:Repeater ID="Repeater3" runat="server"
-                                                ItemType="WelsMain.Verzehr"
-                                                DataSource="<%#Item.Verzehr %>"
-                                                >
-                                                <ItemTemplate>
-                                                    <li><%#Item.Essen.Essen1 %></li>
-                                                </ItemTemplate>
-                                            </asp:Repeater>
-                                            </ul>
+                                                <div class="col-md-8">
+                                                    <ul>
+                                                        <asp:Repeater ID="Repeater3" runat="server"
+                                                            ItemType="WelsMain.Verzehr"
+                                                            DataSource="<%#Item.Verzehr %>">
+                                                            <ItemTemplate>
+                                                                <li><%#Item.Essen.Essen1 %></li>
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    </ul>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <h1><%# Item.Verzehr.Sum((c)=>c.Anzahl*c.Essen.Preis) %> €</h1>
-                                               
                                                 </div>
-                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
