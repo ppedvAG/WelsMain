@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Essen] (
+    [EssenId] INT          IDENTITY (1, 1) NOT NULL,
+    [Essen]   VARCHAR (50) NULL,
+    [Preis]   INT          NULL,
+    PRIMARY KEY CLUSTERED ([EssenId] ASC)
+);
+CREATE TABLE [dbo].[Personen] (
+    [PersonID] INT          IDENTITY (1, 1) NOT NULL,
+    [Name]     VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([PersonID] ASC)
+);

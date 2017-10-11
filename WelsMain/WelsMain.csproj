@@ -203,6 +203,7 @@
     <Content Include="image\ppedvlogo.gif" />
     <Content Include="image\Save-icon.png" />
     <Content Include="Rechner.aspx" />
+    <Content Include="sqlscripte\createtables.txt" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm10.aspx" />
     <Content Include="WebForm11.aspx" />
@@ -219,6 +220,7 @@
     <Content Include="WebForm21.aspx" />
     <Content Include="WebForm22.aspx" />
     <Content Include="WebForm23.aspx" />
+    <Content Include="WebForm24.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
@@ -451,6 +453,13 @@
     </Compile>
     <Compile Include="WebForm23.aspx.designer.cs">
       <DependentUpon>WebForm23.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm24.aspx.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm24.aspx.designer.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
