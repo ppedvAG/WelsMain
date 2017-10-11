@@ -13,5 +13,11 @@ namespace WelsMain
         {
 
         }
+
+        public IEnumerable<WelsMain.Personen> Repeater1_GetData()
+        {
+            var ef = new Kantine();
+            return ef.Personen.ToList();
+        }
     }
 }

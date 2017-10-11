@@ -18,18 +18,31 @@
                     <div class="panel-group" id="accordion" role="tablist"
                         aria-multiselectable="true">
 
-                        <asp:Repeater ID="Repeater1" runat="server">
+                        <asp:Repeater ID="Repeater1" runat="server" 
+                            ItemType="WelsMain.Personen" SelectMethod="Repeater1_GetData">
                             <ItemTemplate>
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingTwo">
                                         <h4 class="panel-title">
-                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
+                                                href="#collapse<%#Item.PersonID %>" aria-expanded="false" aria-controls="collapseTwo">
+                                               <%#Item.Name %>
                                             </a>
+                                            <asp:Repeater ID="Repeater2" runat="server"></asp:Repeater>            <span class="badge pull-right"><%#Item.Verzehr.Count() %></span>
                                         </h4>
                                     </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div id="collapse<%#Item.PersonID %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                         <div class="panel-body">
-                                            Essen
+                                            <ul>
+                                            <asp:Repeater ID="Repeater3" runat="server"
+                                                ItemType="WelsMain.Verzehr"
+                                                DataSource="<%#Item.Verzehr %>"
+                                                >
+                                                <ItemTemplate>
+                                                    <li><%#Item.EssenId %></li>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
