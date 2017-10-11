@@ -14,22 +14,38 @@ namespace WelsMain
 
         }
 
+
+
         // Der Rückgabetyp kann in 'IEnumerable' geändert werden. Damit Paginierung und Sortierung
         // unterstützt werden, müssen jedoch die folgenden Parameter hinzugefügt werden:
         //     int maximumRows
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IQueryable<WelsMain.Personen> ListView1_GetData()
+        public IQueryable<WelsMain.Personen> GridView1_GetData()
         {
             var ef = new Kantine();
+            return ef.Personen.AsQueryable();
+        }
 
-            return ef.Personen.OrderBy((x)=>x.PersonID).AsQueryable<Personen>();
+        // Der Name des ID-Parameters sollte dem für das Steuerelement festgelegten DataKeyNames-Wert entsprechen.
+        public void GridView1_UpdateItem(int PersonID)
+        {
+            var ef = new Kantine();
+            WelsMain.Personen item = null;
+            item = ef.Personen.Find(PersonID);
+            if (item == null)
+            {
+                // Das Element wurde nicht gefunden.
+                ModelState.AddModelError("", String.Format("Das Element mit der ID {0} wurde nicht gefunden.", PersonID));
+                return;
+            }
+            TryUpdateModel(item);
+            if (ModelState.IsValid)
+            {
+                ef.SaveChanges();
 
-
-
-
-            ;
+            }
         }
     }
 }
