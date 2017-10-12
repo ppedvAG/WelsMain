@@ -12,18 +12,24 @@
         <div>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                ValidationGroup="eins"
                 ForeColor="Red"
                 ControlToValidate="TextBox1"
-                ErrorMessage="RequiredFieldValidator">*</asp:RequiredFieldValidator>
+                ErrorMessage="Textbox1 füllen">*</asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" 
                 runat="server" ControlToValidate="TextBox1" 
-                ErrorMessage="RegularExpressionValidator"
+                ErrorMessage="keine email adresse"
                 Display="Dynamic"
                 ForeColor="Red"
                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
 
             <br />
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                ForeColor="Red"
+                ControlToValidate="TextBox2"
+                ErrorMessage="Textbox2 füllen">*</asp:RequiredFieldValidator>
+        
             <asp:Button ID="Button1" runat="server" Text="Button" 
                 OnClick="Button1_Click"/>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" />

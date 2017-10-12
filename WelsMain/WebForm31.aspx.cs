@@ -16,7 +16,12 @@ namespace WelsMain
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Page.Validate("eins");
 
+            if (Page.IsValid)
+            {
+
+            }
         }
     }
 }
