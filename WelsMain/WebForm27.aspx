@@ -28,8 +28,10 @@
                     var rows = data.children();
                     $("#GridView1 tbody").append(rows);
                     page++;
+                   
 
-                }
+                },
+                error: function (result) { alert(result);}
 
             });
        
