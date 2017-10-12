@@ -13,5 +13,10 @@ namespace WelsMain
         {
 
         }
+        public static string immeraktuell(HttpContext ctx)
+        {
+            return DateTime.Now.Ticks.ToString();
+
+        }
     }
 }

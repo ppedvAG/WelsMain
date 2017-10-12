@@ -15,6 +15,7 @@
             <%=DateTime.Now %>
         </div>
         <uc1:WebUserControl2 runat="server" id="WebUserControl2" />
+        <hr />
         <asp:Substitution ID="Substitution1" runat="server"  MethodName="immeraktuell"/>
     </form>
 </body>
