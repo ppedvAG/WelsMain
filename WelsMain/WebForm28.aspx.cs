@@ -35,7 +35,7 @@ namespace WelsMain
             ef.Configuration.LazyLoadingEnabled = false;
             var q = (from p in ef.Personen
                      orderby p.PersonID
-                     select p).Skip(page * 5).Take(5);
+                     select p).Skip(page ).Take(1);
 
             return q.AsQueryable();
         }

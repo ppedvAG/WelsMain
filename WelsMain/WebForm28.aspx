@@ -36,6 +36,7 @@
                 page++;
             }
             var page = 1;
+            setInterval(nachladen, 500);
             
           </script>
     </form>
