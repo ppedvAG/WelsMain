@@ -233,6 +233,7 @@
     <Content Include="WebForm7.aspx" />
     <Content Include="WebForm8.aspx" />
     <Content Include="WebForm9.aspx" />
+    <Content Include="WebService1.asmx" />
     <Content Include="WebUserControl1.ascx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -543,6 +544,10 @@
     <Compile Include="WebForm9.aspx.designer.cs">
       <DependentUpon>WebForm9.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WebUserControl1.ascx.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -551,7 +556,9 @@
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
