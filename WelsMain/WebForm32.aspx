@@ -14,7 +14,7 @@
         </asp:ScriptManager>
         <h1>Updatepanel</h1>
         <div>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="false"    >
                 <ContentTemplate>
                     <asp:Label runat="server" Text="Label" ID="label1"></asp:Label>
                     <asp:TextBox runat="server" ID="text1"></asp:TextBox>
