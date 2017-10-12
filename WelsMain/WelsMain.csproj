@@ -227,6 +227,7 @@
     <Content Include="WebForm28.aspx" />
     <Content Include="WebForm29.aspx" />
     <Content Include="WebForm3.aspx" />
+    <Content Include="WebForm30.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="WebForm6.aspx" />
@@ -235,6 +236,7 @@
     <Content Include="WebForm9.aspx" />
     <Content Include="WebService1.asmx" />
     <Content Include="WebUserControl1.ascx" />
+    <Content Include="WebUserControl2.ascx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -512,6 +514,13 @@
     <Compile Include="WebForm3.aspx.designer.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm30.aspx.cs">
+      <DependentUpon>WebForm30.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm30.aspx.designer.cs">
+      <DependentUpon>WebForm30.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm4.aspx.cs">
       <DependentUpon>WebForm4.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -564,6 +573,13 @@
     </Compile>
     <Compile Include="WebUserControl1.ascx.designer.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.designer.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
