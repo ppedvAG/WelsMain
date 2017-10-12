@@ -23,8 +23,10 @@ namespace WelsMain
 
                 var img = new Bitmap(context.Server.MapPath("/image/" + imgname));
                 var thumb = img.GetThumbnailImage(200, 150, null, IntPtr.Zero);
+                img.Dispose();
                 var stream = new MemoryStream();
                 thumb.Save(stream, ImageFormat.Jpeg);
+                
                 buffer = stream.GetBuffer();
                 stream.Close();
                 stream.Dispose();
