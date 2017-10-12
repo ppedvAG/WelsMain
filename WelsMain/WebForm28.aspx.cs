@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -24,6 +25,7 @@ namespace WelsMain
         public IQueryable<WelsMain.Personen> GridView1_GetData()
         {
             var ef = new Kantine();
+        
 
             return ef.Personen.Take(5);
         }
@@ -36,7 +38,7 @@ namespace WelsMain
             var q = (from p in ef.Personen
                      orderby p.PersonID
                      select p).Skip(page ).Take(1);
-
+            Debug.WriteLine("seite " + page.ToString());
             return q.AsQueryable();
         }
     }

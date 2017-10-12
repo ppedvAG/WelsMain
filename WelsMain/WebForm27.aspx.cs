@@ -32,6 +32,7 @@ namespace WelsMain
             var q = (from p in ef.Personen
                      orderby p.PersonID
                      select p).Skip(page.Value * 5).Take(5);
+            Trace.Warn("Hallo Ich war hier");
             return q.AsQueryable();
         }
     }
