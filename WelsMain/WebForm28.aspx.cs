@@ -32,7 +32,7 @@ namespace WelsMain
         {
             var page = Convert.ToInt16( HttpContext.Current.Request.QueryString["p"]);
             var ef = new Kantine();
-            
+            ef.Configuration.LazyLoadingEnabled = false;
             var q = (from p in ef.Personen
                      orderby p.PersonID
                      select p).Skip(page * 5).Take(5);

@@ -10,9 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"
-            EnablePageMethods="true"
-            ></asp:ScriptManager>
+       
         <div> <asp:GridView ID="GridView1" ItemType="WelsMain.Personen"
             SelectMethod="GridView1_GetData"
             runat="server"></asp:GridView>
@@ -26,7 +24,8 @@
                     dataType: "json",
                     url: "/webform28.aspx/Nachladen?p=" + page,
                     success: function (result) {
-                        $.each(result, function (index, row) {
+                        $.each(result.d, function (index, row) {
+                            console.log(row);
                             tr = $('<tr>');
                             tr.append("<td>" + row.PersonID + "</td>");
                             tr.append("<td>" + row.Name + "</td>");
@@ -36,7 +35,7 @@
                 });
                 page++;
             }
-            var page = 0;
+            var page = 1;
             
           </script>
     </form>
