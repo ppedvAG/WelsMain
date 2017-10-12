@@ -16,16 +16,34 @@ namespace WelsMain
 
         public void ProcessRequest(HttpContext context)
         {
-            var imgname= context.Request.QueryString["img"];
-            var img = new Bitmap(context.Server.MapPath("/image/" + imgname));
-           var thumb= img.GetThumbnailImage(200, 150,null,IntPtr.Zero);
-            var stream = new MemoryStream();
-            thumb.Save(stream, ImageFormat.Jpeg);
-            var buffer = stream.GetBuffer();
-           context.Response.ContentType = "image/jpg";
+            var imgname = context.Request.QueryString["img"];
+            Byte[] buffer;
+            if (context.Cache[imgname] == null)
+            {
+
+                var img = new Bitmap(context.Server.MapPath("/image/" + imgname));
+                var thumb = img.GetThumbnailImage(200, 150, null, IntPtr.Zero);
+                var stream = new MemoryStream();
+                thumb.Save(stream, ImageFormat.Jpeg);
+                buffer = stream.GetBuffer();
+                stream.Close();
+                stream.Dispose();
+                context.Cache.Add(imgname, buffer, null, DateTime.MaxValue,
+                    new TimeSpan(1, 0, 0),
+                    System.Web.Caching.CacheItemPriority.Normal, null);
+            }
+            else
+            {
+                buffer = (Byte[]) context.Cache[imgname];
+
+            }
+            context.Response.ContentType = "image/jpg";
             context.Response.OutputStream.Write(buffer, 0, buffer.Length);
-            
-         
+
+
+
+
+
         }
 
         public bool IsReusable
